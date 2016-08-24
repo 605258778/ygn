@@ -1,0 +1,52 @@
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">W3Cschool</a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            {dede:channel type='top' row='8' currentstyle="
+            <li><a href='~typelink~' class='thisclass'>~typename~</a> </li>"}
+            <li><a href='[field:typelink/]'>[field:typename/]</a> </li>
+            {/dede:channel}
+        </ul>
+    </div>
+</nav>
+<div class="mBan2">
+    <div id="slideBox" class="slideBox">
+        <div class="hd">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="bd">
+            <ul>
+                <li>
+                    <a href="#" target="_blank"><img src="{dede:global.cfg_templets_skin/}/images/one.jpg" /></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="{dede:global.cfg_templets_skin/}/images/two.jpg" /></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="{dede:global.cfg_templets_skin/}/images/one.jpg" /></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="{dede:global.cfg_templets_skin/}/images/two.jpg" /></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    jQuery(".slideBox").slide({
+        mainCell: ".bd ul",
+        effect: "fold",
+        autoPlay: true,
+        trigger: "click"
+    });
+});
+</script>
