@@ -1,0 +1,34 @@
+.intit{text-align:center; }
+.intit h2 {line-height:50px;}
+.intit h2 span{font-size:34px; font-weight:bold; color:#5a5a5a; margin:0 5px;letter-spacing:-1px;text-transform:uppercase;}
+.intit h2 i{font-size:34px; font-weight:bold; color:#5a5a5a; margin:0 5px;letter-spacing:-1px;text-transform:uppercase;}
+.intit h2 em{font-size:24px; font-style:normal; color:#000; font-weight: normal; margin:0 5px;vertical-align:top;}
+.intit .border{height:8px; width:70px; border-top:2px solid #cbcbcb; margin:0 auto;}
+.intit .t1{color:#3c3c3c; line-height:18px;}
+.intit .t2{color:#b0b0b0; font-family:Arial; line-height:14px;}
+
+
+.cont1_big {
+    width: 550px;
+    float: left;
+    position: relative;
+    height: 434px;
+}
+.cont1_small {
+    width: 233px;
+    float: left;
+    position: relative;
+    margin: 0 0 2px 2px;
+}
+.cont1_intro {
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    height: 45px !important;
+    width: 100%;
+    color: #FFF;
+    background: url(../images/cont1_intro_bg.png) repeat left top;
+}
+.content1_det{ width:80%; margin:0 auto;}
