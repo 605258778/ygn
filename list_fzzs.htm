@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <meta name="generator" content="www.dedemao.com" />
+    <link href="favicon.ico" rel="shortcut icon" />
+    <title>{dede:global.cfg_webname/}</title>
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/slider.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/common.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/skin.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/web.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/ygn.css">
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/bootstrap.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.SuperSlide.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/page.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/masonry.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/imagesloaded.js"></script>
+</head>
+
+<body>
+    {dede:include filename="head.html"/}
+    <div class="wrap s1box">
+        <div class="intit mt30">
+            <h2><span>Dress show</span><em>礼服展示</em></h2>
+            <div class="border"></div>
+            <div class="t1">我们用影像触碰心灵，感受幸福的温度</div>
+            <div class="t2">We use images to touch the heart, feel the temperature of happiness</div>
+        </div>
+        <div class="dress">
+         <ul>
+             {dede:arclist typeid='3' imgwidth="239" imgheight="335" type="image"}
+                <a href='[field:arcurl/]' title="[field:title/]">
+                   [field:image/]
+                    <div class="lay"><span class="a1"></span><span class="a2"></span><span class="a3"><i>+1</i><b>1647</b></span></div>
+                </a>
+                {/dede:arclist}
+             </ul>
+        </div>
+     <div class="pageu">
+            <a href="http://www.mnls.com/dress/ALL/page1.html" title="Prev" class="prev">&nbsp;</a>
+                        <a href="http://www.mnls.com/dress/ALL/page1.html" class="on">1</a>
+                        <a href="http://www.mnls.com/dress/ALL/page2.html" class="">2</a>
+            <a href="http://www.mnls.com/dress/ALL/page2.html" title="Next" class="next">&nbsp;</a>
+        </div>
+    </div>
+    {dede:include filename="footer.html"/}
+</body>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    jQuery(".slideBox").slide({
+        mainCell: ".bd ul",
+        effect: "fold",
+        autoPlay: true,
+        trigger: "click"
+    });
+});
+</script>
+
+</html>

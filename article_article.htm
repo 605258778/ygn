@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <meta name="generator" content="www.dedemao.com" />
+    <link href="favicon.ico" rel="shortcut icon" />
+    <title>{dede:global.cfg_webname/}</title>
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/slider.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/common.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/skin.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/ygn.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/web.css">
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/bootstrap.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.SuperSlide.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/masonry.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/imagesloaded.js"></script>
+</head>
+
+<body>
+    {dede:include filename="head.html"/}
+<div class="wrap s1box">
+        <div class="intit mt30">
+            <h2><span>LOVE</span><i>SHOW</i><em>客片大赏</em></h2>
+            <div class="border"></div>
+            <div class="t1">我们用影像触碰心灵，感受幸福的温度</div>
+            <div class="t2">We use images to touch the heart, feel the temperature of happiness</div>
+        </div>
+        <div class="tc">
+            <img alt="" src="/templets/ygn/images/phonn.jpg">
+        </div>
+        <div class="phoitem">
+                    <div class="uutit">
+                        <h2 class="cl"><strong><i class="cyel">T</i>itle:</strong><em>{dede:field.title/}</em><div class="y"><a class="pre" href="{dede:prenext get='pro' runphp='yes'}{/dede:prenext}"></a><a class="next" href="{dede:prenext get='next' runphp='yes'}{/dede:prenext}"></a></div>
+                        </h2>
+                        <h4 class="cl"><span>Time:  {dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span><span>Browse:1644</span><span>Share:</span>                            
+                        <!-- JiaThis Button BEGIN -->
+                            <div class="jiathis_style">
+                                <a class="jiathis_button_qzone" title="分享到QQ空间"><span class="jiathis_txt jtico jtico_qzone"></span></a>
+                                <a class="jiathis_button_tsina" title="分享到微博"><span class="jiathis_txt jtico jtico_tsina"></span></a>
+                                <a class="jiathis_button_tqq" title="分享到腾讯微博"><span class="jiathis_txt jtico jtico_tqq"></span></a>
+                                <a class="jiathis_button_weixin" title="分享到微信"><span class="jiathis_txt jtico jtico_weixin"></span></a>
+                                <a class="jiathis_button_renren" title="分享到人人网"><span class="jiathis_txt jtico jtico_renren"></span></a>
+                                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+                                <a class="jiathis_counter_style"><span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_40" title="累计分享1次">1</span></a>
+                            </div>
+                            <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script><script type="text/javascript" src="http://v3.jiathis.com/code/plugin.client.js" charset="utf-8"></script>
+                            </h4>
+                    </div>
+            <div class="uucontent">
+             {dede:field.body/} {dede:field.vote/}    
+            </div> 
+             
+        </div>
+
+        <div class="cback mt50"><a href="http://www.mnls.com/love.html" title="返回列表">点击返回<i>客片大赏</i>列表</a></div>
+    </div>
+    {dede:include filename="footer.html"/}
+</body>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    jQuery(".slideBox").slide({
+        mainCell: ".bd ul",
+        effect: "fold",
+        autoPlay: true,
+        trigger: "click"
+    });
+});
+</script>
+
+</html>
