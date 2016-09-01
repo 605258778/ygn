@@ -52,7 +52,7 @@
 /*订单*/
 .orbox{margin:40px 0 20px 0; overflow:hidden;}
 
-.orleft{float:left; width:883px; position:relative;}
+.orleft{float:left; width: 100%; position:relative;}
 .bb1tit{height:70px; background:#f8f5f6; line-height:70px; text-indent:20px;}
 .bb1tit strong{font-size:40px;font-family:Verdana,arial;letter-spacing:-1px;}
 .bb1tit span{font-size:24px;vertical-align:top;}
@@ -61,8 +61,8 @@
 .orleft .a3{margin-top:40px; line-height:20px; font-size:16px; text-align:center;}
 .orleft .a4{margin-top:6px; font-size:10px; line-height:10px; text-align:center; color:#ccc;}
 .orform{margin-top:30px; overflow:hidden;}
-.orform li{padding:7px 0; width:50%; float:left; height:31px;}
-.orform li label{float:left; padding:0 10px 0 15px; width:85px; font-size:16px; color:#212121; line-height:31px; text-align:right;}
+.orform li{padding:7px 0; width:50%; float:left; height:31px;margin: 7px 0;}
+.orform li label{float:left; padding:0 10px 0 15px; width:135px; font-size:16px; color:#212121; line-height:31px; text-align:right;}
 .orform li label i{padding:0 16px;}
 .orform li .oipt{float:left; background:url(../images/input1.jpg) no-repeat; border:none; width:316px; height:31px; line-height:31px; font-size:14px; text-indent:14px;}
 .orform li .osel{float:left; background:url(../images/select1.jpg) no-repeat; border:none; width:316px; height:31px; line-height:31px; position:relative;}
@@ -111,7 +111,7 @@
 /*新闻*/
 .newsde{margin-top:35px;  position:relative; overflow:hidden;}
 .newsdelist{margin:-1px 0 0 -1px;}
-.newsde a{padding:26px 0; float:left; width:440px; height:90px; border-top:1px solid #e5e5e5; border-left:1px solid #e5e5e5;}
+.newsde a{padding:26px 0; float:left; width:49%; border-top:1px solid #e5e5e5; border-left:1px solid #e5e5e5;}
 .newsde .t1{float:left; width:90px; height:90px; background:url(../images/ordatebg.jpg) no-repeat; text-align:center; font-family:Arial; margin-left:10px;}
 .newsde .t1 strong{display:block; padding-top:14px; font-size:56px; line-height:50px; font-weight:normal; color:#585858;}
 .newsde .t1 span{display:block; line-height:14px;  color:#9f9f9f;}

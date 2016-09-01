@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <meta name="generator" content="www.dedemao.com" />
+    <link href="favicon.ico" rel="shortcut icon" />
+    <title>{dede:global.cfg_webname/}</title>
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/slider.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/common.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/skin.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/web.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/ygn.css">
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/bootstrap.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.SuperSlide.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/page.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/masonry.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/imagesloaded.js"></script>
+</head>
+
+<body>
+    {dede:include filename="head.html"/}
+    <div class="wrap">
+        <div class="intit mt30">
+            <h2><span>CONTACT</span><i>US</i><em>联系我们</em></h2>
+            <div class="border"></div>
+            <div class="t1">我们用影像触碰心灵，感受幸福的温度</div>
+            <div class="t2">We hope to keep all the wonderful warm image</div>
+        </div>
+        <div class="orbox">
+            <div class="orleft">
+                <!--左部-->
+                <div class="bb1tit"><strong><i class="cyel">C</i>ONTACT US</strong> <span>铜仁忆光年摄影工作室</span></div>
+                <div class="contbox mt30">
+                    <ul class="con1">
+                        <li>
+                            <div>
+                                <!--<a href="tel:400-0905-520" title="联系电话">-->
+                                <a href="javascript:;" title="联系电话">
+                                    <div>
+                                        <img alt="" src="{dede:global.cfg_templets_skin/}/images/cant_01.jpg">
+                                    </div>
+                                    <div class="text"><strong>联系电话</strong><span class="f18">188-8630-0890</span></div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="http://weibo.com/bjmnls" target="_blank" title="新浪微博">
+                                    <div>
+                                        <img alt="" src="{dede:global.cfg_templets_skin/}/images/cant_02.jpg">
+                                    </div>
+                                    <div class="text"><strong>新浪微博</strong><span class="f16">@忆光年摄影工作室</span></div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="/weixin.html" target="_blank" title="微信订阅号">
+                                    <div>
+                                        <img alt="" src="{dede:global.cfg_templets_skin/}/images/cant_03.jpg">
+                                    </div>
+                                    <div class="text"><strong>微信订阅号</strong><span class="f18">fandelin610</span></div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="con2 mt40 cl">
+                        <div class="z">
+                            <strong class="f18">铜仁市阳光商城二楼36号</strong>
+                            <br>
+                            <span>Tongren sunshine mall two floor, number 36</span>
+                        </div>
+                        <div class="y">
+                            <a href="4000905520" target="_blank" title="QQ咨询"><img alt="" src="{dede:global.cfg_templets_skin/}/images/cantqq1.jpg"></a>
+                            <a href="javascript:;" title="QQ咨询"><img alt="" src="{dede:global.cfg_templets_skin/}/images/cantqq2.jpg"></a>
+                            <a href="javascript:;" title="QQ咨询"><img alt="" src="{dede:global.cfg_templets_skin/}/images/cantqq3.jpg"></a>
+                            <a href="javascript:;" title="QQ咨询"><img alt="" src="{dede:global.cfg_templets_skin/}/images/cantqq4.jpg"></a>
+                        </div>
+                    </div>
+                    <div>
+                            <!--引用百度地图API-->
+                            <style type="text/css">
+                            html,
+                            body {
+                                margin: 0;
+                                padding: 0;
+                            }
+                            
+                            .iw_poi_title {
+                                color: #CC5522;
+                                font-size: 14px;
+                                font-weight: bold;
+                                overflow: hidden;
+                                padding-right: 13px;
+                                white-space: nowrap
+                            }
+                            
+                            .iw_poi_content {
+                                font: 12px arial, sans-serif;
+                                overflow: visible;
+                                padding-top: 4px;
+                                white-space: -moz-pre-wrap;
+                                word-wrap: break-word
+                            }
+                            </style>
+                            <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+                        </head>
+
+                        <body>
+                            <!--百度地图容器-->
+                            <div style="width:100%;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+                        </body>
+                        <script type="text/javascript">
+                        //创建和初始化地图函数：
+                        function initMap() {
+                            createMap(); //创建地图
+                            setMapEvent(); //设置地图事件
+                            addMapControl(); //向地图添加控件
+                            addMarker(); //向地图中添加marker
+                        }
+
+                        //创建地图函数：
+                        function createMap() {
+                            var map = new BMap.Map("dituContent"); //在百度地图容器中创建一个地图
+                            var point = new BMap.Point(109.19948, 27.72436); //定义一个中心点坐标
+                            map.centerAndZoom(point, 18); //设定地图的中心点和坐标并将地图显示在地图容器中
+                            window.map = map; //将map变量存储在全局
+                        }
+
+                        //地图事件设置函数：
+                        function setMapEvent() {
+                            map.enableDragging(); //启用地图拖拽事件，默认启用(可不写)
+                            map.enableScrollWheelZoom(); //启用地图滚轮放大缩小
+                            map.enableDoubleClickZoom(); //启用鼠标双击放大，默认启用(可不写)
+                            map.enableKeyboard(); //启用键盘上下左右键移动地图
+                        }
+
+                        //地图控件添加函数：
+                        function addMapControl() {
+                            //向地图中添加缩放控件
+                            var ctrl_nav = new BMap.NavigationControl({
+                                anchor: BMAP_ANCHOR_TOP_LEFT,
+                                type: BMAP_NAVIGATION_CONTROL_LARGE
+                            });
+                            map.addControl(ctrl_nav);
+                            //向地图中添加缩略图控件
+                            var ctrl_ove = new BMap.OverviewMapControl({
+                                anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+                                isOpen: 1
+                            });
+                            map.addControl(ctrl_ove);
+                            //向地图中添加比例尺控件
+                            var ctrl_sca = new BMap.ScaleControl({
+                                anchor: BMAP_ANCHOR_BOTTOM_LEFT
+                            });
+                            map.addControl(ctrl_sca);
+                        }
+
+                        //标注点数组
+                        var markerArr = [{
+                            title: "忆光年摄影工作室",
+                            content: "阳光商城二楼36号",
+                            point: "109.199108|27.72464",
+                            isOpen: 0,
+                            icon: {
+                                w: 21,
+                                h: 21,
+                                l: 0,
+                                t: 0,
+                                x: 6,
+                                lb: 5
+                            }
+                        }];
+                        //创建marker
+                        function addMarker() {
+                            for (var i = 0; i < markerArr.length; i++) {
+                                var json = markerArr[i];
+                                var p0 = json.point.split("|")[0];
+                                var p1 = json.point.split("|")[1];
+                                var point = new BMap.Point(p0, p1);
+                                var iconImg = createIcon(json.icon);
+                                var marker = new BMap.Marker(point, {
+                                    icon: iconImg
+                                });
+                                var iw = createInfoWindow(i);
+                                var label = new BMap.Label(json.title, {
+                                    "offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20)
+                                });
+                                marker.setLabel(label);
+                                map.addOverlay(marker);
+                                label.setStyle({
+                                    borderColor: "#808080",
+                                    color: "#333",
+                                    cursor: "pointer"
+                                });
+
+                                (function() {
+                                    var index = i;
+                                    var _iw = createInfoWindow(i);
+                                    var _marker = marker;
+                                    _marker.addEventListener("click", function() {
+                                        this.openInfoWindow(_iw);
+                                    });
+                                    _iw.addEventListener("open", function() {
+                                        _marker.getLabel().hide();
+                                    })
+                                    _iw.addEventListener("close", function() {
+                                        _marker.getLabel().show();
+                                    })
+                                    label.addEventListener("click", function() {
+                                        _marker.openInfoWindow(_iw);
+                                    })
+                                    if (!!json.isOpen) {
+                                        label.hide();
+                                        _marker.openInfoWindow(_iw);
+                                    }
+                                })()
+                            }
+                        }
+                        //创建InfoWindow
+                        function createInfoWindow(i) {
+                            var json = markerArr[i];
+                            var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>" + json.content + "</div>");
+                            return iw;
+                        }
+                        //创建一个Icon
+                        function createIcon(json) {
+                            var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w, json.h), {
+                                imageOffset: new BMap.Size(-json.l, -json.t),
+                                infoWindowOffset: new BMap.Size(json.lb + 5, 1),
+                                offset: new BMap.Size(json.x, json.h)
+                            })
+                            return icon;
+                        }
+
+                        initMap(); //创建和初始化地图
+                        </script>
+
+                        </html>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {dede:include filename="footer.html"/}
+</body>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    jQuery(".slideBox").slide({
+        mainCell: ".bd ul",
+        effect: "fold",
+        autoPlay: true,
+        trigger: "click"
+    });
+});
+</script>
+
+</html>

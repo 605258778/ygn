@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <meta name="generator" content="www.dedemao.com" />
+    <link href="favicon.ico" rel="shortcut icon" />
+    <title>{dede:global.cfg_webname/}</title>
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/slider.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/common.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/skin.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/web.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/ygn.css">
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/bootstrap.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.SuperSlide.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/page.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/masonry.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/imagesloaded.js"></script>
+</head>
+
+<body>
+    {dede:include filename="head.html"/}
+    <div class="wrap">
+        <div class="intit mt30">
+            <h2><span>ONLINE</span><i>ORDERS</i><em>在线订单</em></h2>
+            <div class="border"></div>
+            <div class="t1">我们用影像触碰心灵，感受幸福的温度</div>
+            <div class="t2">We use images to touch the heart, feel the temperature of happiness</div>
+        </div>
+        <div class="orbox">
+            <div class="orleft">
+                <div class="bb1tit"><strong><i class="cyel">B</i>ASIC INFORMATION</strong> <span>专属客人基本资料</span></div>
+                <div class="a2">已有<span>000004</span>人报名</div>
+                <div class="a3">
+                    亲爱的朋友，您可以在网上咨询并进行在线订单，我们的工作人员会及时的与您取得联系
+                    <br> 如果你有任何疑问，可以通过在线QQ或者电话咨询我们的工作人员
+                </div>
+                <div class="a4">
+                    My dear friends, you can online consulting and online registration, our staff will contact you in time if you have any
+                    <br> questions, can through online QQ or telephone our staff
+                </div>
+                <div class="orform">
+                    <form id="form1">
+                        <ul class="cl">
+                            <li>
+                                <label>姓<i></i>名：</label>
+                                <input class="oipt" name="uname" id="uname" maxlength="10" type="text">
+                            </li>
+                            <li>
+                                <label>联系电话：</label>
+                                <input class="oipt" name="utele" id="utele" maxlength="11" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" type="text">
+                            </li>
+                            <li>
+                                <label>Q<i></i>Q：</label>
+                                <input class="oipt" name="uqq" id="uqq" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="30" type="text">
+                            </li>
+                            <li>
+                                <label>微<i></i>信：</label>
+                                <input class="oipt" name="uweixin" id="uweixin" maxlength="30" type="text">
+                            </li>
+                            <li>
+                                <label>预定时间：</label>
+                                <input class="oipt" name="utime" id="utime" maxlength="50" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss' })" type="text">
+                            </li>
+                            <li>
+                                <label>联系地址：</label>
+                                <input class="oipt" name="uaddress" id="uaddress" maxlength="100" type="text">
+                            </li>
+                            <li>
+                                <label>选择套餐：</label>
+                                <div class="osel">
+                                    <span></span>
+                                    <select name="utaocan" id="utaocan">
+                                        <option>订单套餐5</option>
+                                        <option>订单套餐4</option>
+                                        <option>订单套餐3</option>
+                                        <option>订单套餐2</option>
+                                        <option>订单套餐1</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <label>婚礼预算：</label>
+                                <div class="osel">
+                                    <span></span>
+                                    <select name="uprice" id="uprice">
+                                        <option>4000-6000</option>
+                                        <option>6000-8000</option>
+                                        <option>8000-16000</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="ar1bb">
+                                <label>备<i></i>注：</label>
+                                <textarea rows="" cols="" name="utextarea" id="utextarea" class="oarea"></textarea>
+                            </li>
+                            <li class="ar2bb cl">
+                                <label>验 证 码：</label>
+                                <input class="oipt2" name="ucode" id="ucode" maxlength="4" type="text">
+                                <img width="60" alt="" src="http://www.mnls.com/htmlcode/checkcode.aspx" onclick="checkcoderandom('http://www.mnls.com/htmlcode',this,4);return false;" id="yzmm" class="ocode">
+                                <input type="reset" name="btnres" id="btnres" value="" class="obbtn1">
+                                <input type="button" name="btnsubmit" onclick="orderadd();" class="obbtn2">
+                            </li>
+                        </ul>
+                    </form>
+                    <script type="text/javascript">
+                    $(".osel select").on("change", function() {
+                        var opt = $(this).find('option:selected');
+                        $(this).siblings('span').html(opt.text());
+                    });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {dede:include filename="footer.html"/}
+</body>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    jQuery(".slideBox").slide({
+        mainCell: ".bd ul",
+        effect: "fold",
+        autoPlay: true,
+        trigger: "click"
+    });
+});
+</script>
+
+</html>
