@@ -34,10 +34,12 @@ $(function() {
         $(this).find("tt").stop().animate({ top: -500 }, 600);
     });
 
-    //$(".orleft .abomm p:not(:has(img))").css({"text-indent":"2em"});
-
-
-
+    jQuery(".slideBox").slide({
+        mainCell: ".bd ul",
+        effect: "fold",
+        autoPlay: true,
+        trigger: "click"
+    });
 
     $(function() {
         $(window).resize(function() { goTop(); });

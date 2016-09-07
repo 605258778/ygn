@@ -31,23 +31,18 @@
             <div class="t1">我们用影像触碰心灵，感受幸福的温度</div>
             <div class="t2">We use images to touch the heart, feel the temperature of happiness</div>
         </div>
-        <div class="caseshow">
+        <div class="hobox2">
             <div class="box cl">
-                {dede:arclist typeid='3' imgwidth="385" imgheight="550" type="image"}
-                    <a href='[field:arcurl/]' title="[field:title/]">
-                       [field:image/]
-                        <div class="lay"><span>主题 - 繁花如梦2</span></div>
-                    </a> 
-                {/dede:arclist}
+                {dede:list pagesize='15' typeid='4' row='5' type='image' imgwidth="239" imgheight="335" orderby=click}
+                <a href="[field:arcurl/]" title="[field:title/]" class="vo">
+                    <img src="[field:litpic/]" alt="[field:title/]">
+                    <div class="lay" style="top: -335px;"><span class="a1"></span><span class="a2"></span><span class="a3"><i>+1</i><b>[field:click/]</b></span></div>
+                </a>
+                {/dede:list}
             </div>
         </div>
         <div class="pageu">
-            <a href="http://www.mnls.com/showcase/ALL/page1.html" title="Prev" class="prev">&nbsp;</a>
-            <a href="http://www.mnls.com/showcase/ALL/page1.html" class="on">1</a>
-            <a href="http://www.mnls.com/showcase/ALL/page2.html" class="">2</a>
-            <a href="http://www.mnls.com/showcase/ALL/page3.html" class="">3</a>
-            <a href="http://www.mnls.com/showcase/ALL/page4.html" class="">4</a>
-            <a href="http://www.mnls.com/showcase/ALL/page2.html" title="Next" class="next">&nbsp;</a>
+            {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
         </div>
     </div>
     {dede:include filename="footer.html"/}

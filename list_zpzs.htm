@@ -33,21 +33,16 @@
         </div>
         <div class="caseshow">
             <div class="box cl">
-                {dede:arclist typeid='3' imgwidth="385" imgheight="550" type="image"}
+                {dede:list typeid='3' pagesize='9' imgwidth="385" imgheight="550" type="image"}
                     <a href='[field:arcurl/]' title="[field:title/]">
                        [field:image/]
-                        <div class="lay"><span>主题 - 繁花如梦2</span></div>
+                        <div class="lay"><span>[field:title/]</span></div>
                     </a> 
-                {/dede:arclist}
+                {/dede:list}
             </div>
         </div>
         <div class="pageu">
-            <a href="http://www.mnls.com/showcase/ALL/page1.html" title="Prev" class="prev">&nbsp;</a>
-            <a href="http://www.mnls.com/showcase/ALL/page1.html" class="on">1</a>
-            <a href="http://www.mnls.com/showcase/ALL/page2.html" class="">2</a>
-            <a href="http://www.mnls.com/showcase/ALL/page3.html" class="">3</a>
-            <a href="http://www.mnls.com/showcase/ALL/page4.html" class="">4</a>
-            <a href="http://www.mnls.com/showcase/ALL/page2.html" title="Next" class="next">&nbsp;</a>
+            {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
         </div>
     </div>
     {dede:include filename="footer.html"/}
