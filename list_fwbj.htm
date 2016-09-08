@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <meta name="generator" content="www.dedemao.com" />
+    <link href="favicon.ico" rel="shortcut icon" />
+    <title>{dede:global.cfg_webname/}</title>
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/slider.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/common.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/skin.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/web.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/ygn.css">
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/bootstrap.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.SuperSlide.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/page.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/masonry.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/imagesloaded.js"></script>
+</head>
+
+<body>
+    {dede:include filename="head.html"/}
+    <div>
+        <div class="intit mt30">
+            <h2><span>SHOWCASE</span><em>服务报价</em></h2>
+            <div class="border"></div>
+            <div class="t1">我们用影像触碰心灵，感受幸福的温度</div>
+            <div class="t2">We use images to touch the heart, feel the temperature of happiness</div>
+        </div>
+        <div class="excl">
+            <div class="exclMax">
+                <div class="history">
+                    <!-- 历史活动 -->
+                    <div class="historyMax">
+                        <ul>
+                            <!-- li循环 -->
+                            {dede:arclist typeid='6' channelid='17' addfields='hdtp,hdbh,fzcp,mffw,gmxz,yjg,xjg' pagesize='3' titlelen=50}
+                            <li>
+                                <div class="historyBottom" id="Show">
+                                    <div class="historyBLeft">
+                                        <div class="swiper-container swiper-container-horizontal">
+                                            <div class="swiper-slide" style="width: 520px;"><img style="height: 300px;width: 520px;
+" src="[field:hdtp/]" alt></div>
+                                        </div>
+                                    </div>
+                                    <div class="historyBRight">
+                                        <div class="histBRMax">
+                                            <div class="histBRTitle">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="current">本单包含</td>
+                                                            <td class="">附赠产品</td>
+                                                            <td class="">免费服务</td>
+                                                            <td class="">购买须知</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="histBRContent">
+                                                <table>
+                                                    <tbody>
+                                                        <tr style="left: 0px;">
+                                                            <td>
+                                                                [field:hdbh/]
+                                                                <p>&nbsp;</p>
+                                                            </td>
+                                                            <td>
+                                                                [field:fzcp/]
+                                                                <p>&nbsp;&nbsp;</p>
+                                                            </td>
+                                                            <td>
+                                                                [field:mffw/]
+                                                            </td>
+                                                            <td>
+                                                                [field:gmxz/]
+                                                                <br>
+                                                                <br> &nbsp;&nbsp;
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="histTitle">
+                                                <abbr>原价：￥<i style="text-decoration:line-through;">[field:yjg/]</i>现价：￥<i>[field:xjg/]</i></abbr>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            {/dede:arclist}
+                            <!-- li END -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pageu">
+            {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+        </div>
+    </div>
+    {dede:include filename="footer.html"/}
+</body>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    jQuery(".slideBox").slide({
+        mainCell: ".bd ul",
+        effect: "fold",
+        autoPlay: true,
+        trigger: "click"
+    });
+});
+</script>
+
+</html>

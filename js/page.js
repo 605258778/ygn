@@ -69,7 +69,43 @@ $(function() {
             })
 
 });
-
+$(function(){
+    $('.histBRTitle  td').click(function(){
+        _this = $(this);
+        _height = $('.histBRContent').find('td').width();
+        _this.addClass('current').siblings('td').removeClass('current');
+        $('.histBRContent').find('tr').css({'left':-_this.index()*_height+'px'});
+        });
+    $('.btnB').click(function(){
+        _this = $(this).parents('li').find('.historyBottom');
+        _id = _this.attr('id');
+        if(_id=='Show'){
+            _this.removeAttr('id');
+            }else{
+                _this.attr('id','Show');
+                }
+        });
+    $('.exclReturn').click(function(){
+        _this = $(this).parents('li').find('.historyBottom');
+        _this.removeAttr('id');
+        });
+    $(window).scroll(function(){            
+        
+        });
+    $('#close').click(function(){
+        $('.pContent').css({'left':'-999em'});
+        for(i=0;i<$('.photoContent ul').find('li').length;i++){
+            $('.pContent .swiper-button-prev').click();
+            }       
+        });
+    $('.photoContent ul').find('li').click(function(){
+        _this = $(this);
+        $('.pContent').css({'left':'0'});       
+        for(i=0;i<_this.index();i++){
+            $('.pContent .swiper-button-next').click();
+            }
+        });
+    });
 
 
 $(function() {
