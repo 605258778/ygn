@@ -26,57 +26,55 @@
     {dede:include filename="head.html"/}
     <div class="wrap s1box">
         <div class="intit mt30">
-            <h2><span>SHOWCASE</span><em>客照欣赏</em></h2>
+            <h2><span>SHOWCASE</span><em>服装展示</em></h2>
             <div class="border"></div>
             <div class="t1">我们用影像触碰心灵，感受幸福的温度</div>
             <div class="t2">We use images to touch the heart, feel the temperature of happiness</div>
         </div>
-        <div class="caseshow">
-            <div class="box cl">
-                {dede:field name='imgurls' alt='图片输出区'}
-                [field:pagestyle runphp='yes'] @me= (@me==3 ? '<li>' : '');[/field:pagestyle]
-                <a href='[field:linkurl/]' [field:pagestyle runphp='yes'] @me= (@me==3 ? 'class="pic"' : ''); [/field:pagestyle]>
-                  <img src='[field:imgsrc/]' id='bigimg' [field:imgwidth /] alt='[field:alttext /]' border='0' />
-                </a>
-                <a href='[field:linkurl/]' [field:pagestyle runphp='yes']@me = (@me==3 ? 'class="title"' : '');[/field:pagestyle]>
-                	[field:title /]
-                </a>
-                [field:pagestyle runphp='yes'] @me = (@me==3 ? '</li>' : ''); [/field:pagestyle]
-             {/dede:field}
-
-             {dede:field name='pagestyle' alt='根据不同的风格输出不同的结尾信息' runphp='yes'}
-                if(@me==3) {
-                @me = '</ul>';
-                }
-                else if(@me==2) {
-                	@me = "<script language='javascript'>dStartPlay();</script>\r\n";
-               	}
-               	else {
-               		@me = '';
-                }
-             {/dede:field}
+         <div class="phoitem">
+        <div class="uutit">
+            <h4 class="cl"><span>Time:  {dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span><span>Browse:{dede:field.click/}</span><span>Share:</span>                            
+                <div class="jiathis_style">
+                    <a class="jiathis_button_qzone"></a>
+                    <a class="jiathis_button_tsina"></a>
+                    <a class="jiathis_button_tqq"></a>
+                    <a class="jiathis_button_weixin"></a>
+                    <a class="jiathis_button_renren"></a>
+                    <a class="jiathis_button_xiaoyou"></a>
+                    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+                    <a class="jiathis_counter_style"></a>
+                </div>
+                <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+            </h4>
+            <div class="photoArticle">
+                <article class="cont-tit">
+                    <div class="mid-ts">
+                        <h3>{dede:field.title/}</h3>
+                    </div>
+                </article>
+                <div class="photoContent">
+                    <ul>
+                        {dede:field.id function="Getimgs(@me,300,250,10)" /}
+                    </ul>                       
+                </div>
             </div>
         </div>
+        </div>
         <div class="pageu">
-            <a href="http://www.mnls.com/showcase/ALL/page1.html" title="Prev" class="prev">&nbsp;</a>
-            <a href="http://www.mnls.com/showcase/ALL/page1.html" class="on">1</a>
-            <a href="http://www.mnls.com/showcase/ALL/page2.html" class="">2</a>
-            <a href="http://www.mnls.com/showcase/ALL/page3.html" class="">3</a>
-            <a href="http://www.mnls.com/showcase/ALL/page4.html" class="">4</a>
-            <a href="http://www.mnls.com/showcase/ALL/page2.html" title="Next" class="next">&nbsp;</a>
+            {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
         </div>
     </div>
     {dede:include filename="footer.html"/}
 </body>
 <script type="text/javascript">
-$(document).ready(function(e) {
-    jQuery(".slideBox").slide({
-        mainCell: ".bd ul",
-        effect: "fold",
-        autoPlay: true,
-        trigger: "click"
+    $(document).ready(function(e) {
+        jQuery(".slideBox").slide({
+            mainCell: ".bd ul",
+            effect: "fold",
+            autoPlay: true,
+            trigger: "click"
+        });
     });
-});
 </script>
 
 </html>

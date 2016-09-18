@@ -44,23 +44,7 @@
             <span class="prev"></span><span class="next"></span>
         </div>
         <div class="waepr-lifu">
-         <ul>
-            {dede:list pagesize='6' typeid='12' type='image' imgwidth="360" imgheight="600" orderby=click}
-            <li>
-             <dl>
-              <dt><a href="[field:arcurl/]"><img src="[field:litpic/]"></a></dt>
-              <dd>
-                <span>
-                 [field:title/]
-             </span>
-         </dd>
-     </dl>
- </li>
- {/dede:list}
-</ul>
-</div>
-<div class="pageu">
-    {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+         {dede:field.content/}
 </div>
 </div>
 {dede:include filename="footer.html"/}

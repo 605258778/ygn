@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <meta name="generator" content="www.dedemao.com" />
+    <link href="favicon.ico" rel="shortcut icon" />
+    <title>{dede:global.cfg_webname/}</title>
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/slider.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/common.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/skin.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/web.css">
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/ygn.css">
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/bootstrap.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.SuperSlide.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/page.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/masonry.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/imagesloaded.js"></script>
+</head>
+
+<body>
+    {dede:include filename="head.html"/}
+    <div class="body">
+        <div class="intit mt40">
+            <h2><span>EVENT</span><i>NEWS</i><em>热门活动</em></h2>
+            <div class="border"></div>
+            <div class="t1">我们用影像触碰心灵，感受幸福的温度</div>
+            <div class="t2">We use images to touch the heart, feel the temperature of happiness</div>
+        </div>
+        <div class="hobox1 cl">
+            <ul class="n_hc_ul">
+                <li class="n_hc_li1">
+                    <dl>
+                        <dd class="n_hc_lidd1">
+                            <a href="/fwbj" title="服务报价">
+                                <img src="{dede:global.cfg_templets_skin/}/images/fwbj.jpg" alt="服务报价" width="188"></a>
+                        </dd>
+                        <dd class="n_hc_lidd2">
+                            <a href="/zxzx" title="最新资讯">
+                                <img src="{dede:global.cfg_templets_skin/}/images/zxzx.jpg" alt="最新资讯" width="254" style="width: 254px; top: 0px; left: 0px;"></a>
+                        </dd>
+                        <dd class="n_hc_lidd3">
+                            <a href="/khpj" title="客户评价">
+                                <img src="{dede:global.cfg_templets_skin/}/images/khpj.jpg" alt="客户评价" width="188"></a>
+                        </dd>
+                        <dd class="n_hc_lidd4">
+                            <a href="/fzzs" title="服装展示">
+                                <img src="{dede:global.cfg_templets_skin/}/images/fzzs.jpg" alt="" width="254" style="width: 254px; top: 0px; left: 0px;"></a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="n_hc_li2">
+                    <a href="/kzxs" title="客片欣赏"><img src="{dede:global.cfg_templets_skin/}/images/kzxs.jpg" alt="客片欣赏" width="414" style="width: 110%; top: -5%; left: -5%;"></a>
+                </li>
+                <li class="n_hc_li3">
+                    <a href="/zpzs" title="作品展示"><img src="{dede:global.cfg_templets_skin/}/images/zpzs.jpg" alt="作品展示" width="330"></a>
+                </li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+        $('.hobox1 a').hover(function() {
+            $(this).children('img').stop().animate({
+                width: '110%',
+                top: '-5%',
+                left: '-5%'
+            }, 500);
+        }, function() {
+            $(this).children('img').stop().animate({
+                width: $(this).width(),
+                top: 0,
+                left: 0
+            }, 500);
+        });
+        </script>
+    </div>
+    <div class="hobox2">
+        <div class="intit">
+            <h2><span>LOVE</span><i>SHOW</i><em>客照欣赏</em></h2>
+            <div class="border"></div>
+            <div class="t1">我们用影像触碰心灵，感受幸福的温度</div>
+            <div class="t2">We use images to touch the heart, feel the temperature of happiness</div>
+        </div>
+        <div class="box cl">
+                {dede:arclist pagesize='15' typeid='4' type='image' imgwidth="239" imgheight="335" orderby=click}
+                <a href="[field:arcurl/]" title="[field:title/]" class="vo">
+                    <img src="[field:litpic/]" alt="[field:title/]">
+                    <div class="lay" style="top: -335px;"><span class="a1"></span><span class="a2"></span><span class="a3"><i>+1</i><b>[field:click/]</b></span></div>
+                </a>
+                {/dede:arclist}
+        </div>
+        <p class="vmore">
+            <a href="/kzxs"></a>
+        </p>
+    </div>
+    <div class="hobox3">
+        <div class="intit">
+            <h2><span>NEWS &amp;</span><i>ACTIVITY</i><em>最新动态</em></h2>
+            <div class="border"></div>
+            <div class="t1">我们用影像触碰心灵，感受幸福的温度</div>
+            <div class="t2">We use images to touch the heart, feel the temperature of happiness</div>
+        </div>
+        <div class="nnbox cl">
+            <div class="newsde cl">
+                    <div class="newsdelist">
+            {dede:arclist typeid='5' pagesize='10' titlelen=50}
+                <a href="[field:arcurl/]" title="[field:title/]">
+                    <div class="t1"><strong>[field:pubdate function="MyDate('m',@me)"/]</strong><span>[field:pubdate function="MyDate('Y',@me)"/]</span></div>
+                    <div class="t2"><strong>[field:title/]</strong><span>[field:description /]...</span></div>
+                </a>
+            {/dede:arclist}
+            </div>
+            </div>
+        </div>
+    </div>
+    {dede:include filename="footer.html"/}
+</body>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    jQuery(".slideBox").slide({
+        mainCell: ".bd ul",
+        effect: "fold",
+        autoPlay: true,
+        trigger: "click"
+    });
+});
+</script>
+
+</html>
