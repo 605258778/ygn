@@ -1,6 +1,11 @@
 $(function() {
 
-
+    jQuery(".slideBox").slide({
+        mainCell: ".bd ul",
+        effect: "fold",
+        autoPlay: true,
+        trigger: "click"
+    });
     $(".topmenu ul li").hover(function() {
         $(this).find("dl").stop().animate({ height: $(this).find("dd").length * 40 }, 400);
         $(this).find("p a").addClass("hover01");
@@ -58,7 +63,7 @@ $(function() {
         autoPlay: true,
         trigger: "click"
     });
-
+    $(".lxwm_qq").find("a").attr("href",$(".Qlist").find("a").eq(0).attr("href"));
     $(function() {
         $(window).resize(function() { goTop(); });
         $(window).scroll(function() { goTop(); });

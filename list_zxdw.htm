@@ -34,7 +34,6 @@
         <div class="orbox">
             <div class="orleft">
                 <div class="bb1tit"><strong><i class="cyel">B</i>ASIC INFORMATION</strong> <span>专属客人基本资料</span></div>
-                <div class="a2">已有<span>000004</span>人报名</div>
                 <div class="a3">
                     亲爱的朋友，您可以在网上咨询并进行在线订单，我们的工作人员会及时的与您取得联系
                     <br> 如果你有任何疑问，可以通过在线QQ或者电话咨询我们的工作人员
@@ -44,37 +43,43 @@
                     <br> questions, can through online QQ or telephone our staff
                 </div>
                 <div class="orform">
-                    <form id="form1">
+                    <form id="form1" action="/plus/diy.php" enctype="multipart/form-data" method="post" name="feedback">
+                        <input type="hidden" name="action" value="post" />
+                        <input type="hidden" name="diyid" value="1" />
+                        <input type="hidden" name="do" value="2" />
+
+                       <input type="hidden" name="dede_fields" value="oeders_name,text;orders_tel,text;orders_qq,text;orders_weixin,text;orders_time,datetime;orders_addr,text;orders_select,select;orders_money,select;orders_bz,multitext" />
+                        <input type="hidden" name="dede_fieldshash" value="a90fe645c9b15a436274ed326050a2b8" />
                         <ul class="cl">
                             <li>
                                 <label>姓<i></i>名：</label>
-                                <input class="oipt" name="uname" id="uname" maxlength="10" type="text">
+                                <input class="oipt" name="oeders_name" id="uname" maxlength="10" type="text">
                             </li>
                             <li>
                                 <label>联系电话：</label>
-                                <input class="oipt" name="utele" id="utele" maxlength="11" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" type="text">
+                                <input class="oipt" name="orders_tel" id="utele" maxlength="11" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" type="text">
                             </li>
                             <li>
                                 <label>Q<i></i>Q：</label>
-                                <input class="oipt" name="uqq" id="uqq" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="30" type="text">
+                                <input class="oipt" name="orders_qq" id="uqq" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="30" type="text">
                             </li>
                             <li>
                                 <label>微<i></i>信：</label>
-                                <input class="oipt" name="uweixin" id="uweixin" maxlength="30" type="text">
+                                <input class="oipt" name="orders_weixin" id="uweixin" maxlength="30" type="text">
                             </li>
                             <li>
                                 <label>预定时间：</label>
-                                <input class="oipt" name="utime" id="utime" maxlength="50" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss' })" type="text">
+                                <input class="oipt" name="orders_time" id="utime" maxlength="50"  type="date">
                             </li>
                             <li>
                                 <label>联系地址：</label>
-                                <input class="oipt" name="uaddress" id="uaddress" maxlength="100" type="text">
+                                <input class="oipt" name="orders_addr" id="uaddress" maxlength="100" type="text">
                             </li>
                             <li>
                                 <label>选择套餐：</label>
                                 <div class="osel">
                                     <span></span>
-                                    <select name="utaocan" id="utaocan">
+                                    <select name="orders_select" id="utaocan">
                                         <option>订单套餐5</option>
                                         <option>订单套餐4</option>
                                         <option>订单套餐3</option>
@@ -87,7 +92,7 @@
                                 <label>婚礼预算：</label>
                                 <div class="osel">
                                     <span></span>
-                                    <select name="uprice" id="uprice">
+                                    <select name="orders_money" id="uprice">
                                         <option>4000-6000</option>
                                         <option>6000-8000</option>
                                         <option>8000-16000</option>
@@ -96,16 +101,22 @@
                             </li>
                             <li class="ar1bb">
                                 <label>备<i></i>注：</label>
-                                <textarea rows="" cols="" name="utextarea" id="utextarea" class="oarea"></textarea>
+                                <textarea rows="" cols="" name="orders_bz" id="utextarea" class="oarea"></textarea>
                             </li>
                             <li class="ar2bb cl">
                                 <label>验 证 码：</label>
-                                <input class="oipt2" name="ucode" id="ucode" maxlength="4" type="text">
-                                <img width="60" alt="" src="http://www.mnls.com/htmlcode/checkcode.aspx" onclick="checkcoderandom('http://www.mnls.com/htmlcode',this,4);return false;" id="yzmm" class="ocode">
+                               <input  class="oipt2" name="validate" type="text" id="vdcode" style="text-transform:uppercase;" size="8"/> 
+                                <img id="vdimgck" align="absmiddle" onClick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php"/>  
+                                <a href="javascript:void(-1);" onClick="changeAuthCode();">看不清？ </a>
                                 <input type="reset" name="btnres" id="btnres" value="" class="obbtn1">
-                                <input type="button" name="btnsubmit" onclick="orderadd();" class="obbtn2">
+                                <input type="button" type="submit" name="submit" class="obbtn2">
                             </li>
                         </ul>
+                       <!--  <div align='center' style='height:30px;padding-top:10px;'>
+                        <input type="submit" name="submit" value="提 交" class='coolbg' />
+                        &nbsp;
+                        <input type="reset" name="reset" value="重 置" class='coolbg' />
+                        </div> -->
                     </form>
                     <script type="text/javascript">
                     $(".osel select").on("change", function() {
@@ -129,6 +140,16 @@ $(document).ready(function(e) {
         trigger: "click"
     });
 });
+function changeAuthCode() { 
+    var num =     new Date().getTime();
+    var rand = Math.round(Math.random() * 10000);
+    num = num + rand;
+    $('#ver_code').css('visibility','visible');
+    if ($("#vdimgck")[0]) {
+        $("#vdimgck")[0].src = "../include/vdimgck.php?tag=" + num;
+    }
+    return false;    
+}
 </script>
 
 </html>
