@@ -89,13 +89,14 @@
                                 </div>
                             </li>
                             <li>
-                                <label>婚礼预算：</label>
+                                <label>拍摄预算：</label>
                                 <div class="osel">
                                     <span></span>
                                     <select name="orders_money" id="uprice">
-                                        <option>4000-6000</option>
-                                        <option>6000-8000</option>
-                                        <option>8000-16000</option>
+                                        <option>100-300</option>
+                                        <option>300-800</option>
+                                        <option>800-1500</option>
+                                        <option>1500+</option>
                                     </select>
                                 </div>
                             </li>
@@ -108,15 +109,15 @@
                                <input  class="oipt2" name="validate" type="text" id="vdcode" style="text-transform:uppercase;" size="8"/> 
                                 <img id="vdimgck" align="absmiddle" onClick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php"/>  
                                 <a href="javascript:void(-1);" onClick="changeAuthCode();">看不清？ </a>
-                                <input type="reset" name="btnres" id="btnres" value="" class="obbtn1">
-                                <input type="button" type="submit" name="submit" class="obbtn2">
+                             <!--    <input type="reset" name="btnres" id="btnres" value="" class="obbtn1">
+                                <input type="button" type="submit" name="submit" class="obbtn2"> -->
                             </li>
                         </ul>
-                       <!--  <div align='center' style='height:30px;padding-top:10px;'>
-                        <input type="submit" name="submit" value="提 交" class='coolbg' />
+                       <div align='center' style='height:30px;padding-top:10px;'>
+                        <input type="submit" name="submit" value="" class='coolbg obbtn2' />
                         &nbsp;
-                        <input type="reset" name="reset" value="重 置" class='coolbg' />
-                        </div> -->
+                        <input type="reset" name="reset" value="" class='coolbg obbtn1' />
+                        </div>
                     </form>
                     <script type="text/javascript">
                     $(".osel select").on("change", function() {

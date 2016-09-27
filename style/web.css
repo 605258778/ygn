@@ -442,7 +442,7 @@
     margin-left: 10px;
 }
 
-.orform li .obbtn1 {
+.obbtn1 {
     float: right;
     background: url(../images/obtn1.jpg) no-repeat;
     border: none;
@@ -452,7 +452,7 @@
     cursor: pointer;
 }
 
-.orform li .obbtn2 {
+.obbtn2 {
     float: right;
     background: url(../images/obtn2.jpg) no-repeat;
     border: none;
